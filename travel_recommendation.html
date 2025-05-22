@@ -1,77 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Travel Explorer</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: url('images/background.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: white;
-        }
+  <meta charset="UTF-8">
+  <title>Travel Boom</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom, #87ceeb, #ffffff);
+      overflow-x: hidden;
+    }
 
-        nav {
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
+    body {
+      background: url('images/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
 
-        nav a {
-            color: white;
-            margin: 0 10px;
-            text-decoration: none;
-        }
+    nav {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      z-index: 1000;
+      position: relative;
+    }
 
-        .search-container {
-            display: flex;
-            gap: 10px;
-        }
+    nav img {
+      height: 50px;
+    }
 
-        #results {
-            margin: 20px;
-        }
+    nav a {
+      color: white;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1em;
+    }
 
-        .place-card {
-            background-color: rgba(255, 255, 255, 0.85);
-            color: #333;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 8px;
-        }
+    nav a:hover {
+      color: #00bcd4;
+    }
 
-        .place-card img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 5px;
-        }
-    </style>
+    .search-container {
+      display: flex;
+      gap: 10px;
+    }
+
+    input[type="text"] {
+      padding: 8px;
+      border: none;
+      border-radius: 5px;
+      width: 200px;
+    }
+
+    button {
+      padding: 8px 14px;
+      border: none;
+      border-radius: 5px;
+      background-color: #3e2723;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1b1311;
+    }
+
+    .parallax-section {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .parallax-text {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-radius: 12px;
+      animation: fadeInUp 2s ease;
+    }
+
+    @keyframes fadeInUp {
+      0% {opacity: 0; transform: translateY(40px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+
+    .carousel {
+      display: flex;
+      overflow: hidden;
+      margin: 40px auto;
+      width: 90%;
+      max-width: 1000px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .carousel img {
+      width: 100%;
+      transition: transform 1s ease-in-out;
+      animation: slideIn 6s infinite alternate;
+    }
+
+    @keyframes slideIn {
+      0% {transform: translateX(0);}
+      100% {transform: translateX(-50%);}
+    }
+
+    .social-floating {
+      position: fixed;
+      top: 40%;
+      left: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 999;
+    }
+
+    .social-floating a {
+      color: white;
+      font-size: 1.8em;
+      animation: floatIcon 3s ease-in-out infinite;
+      transition: transform 0.3s;
+    }
+
+    .social-floating a:hover {
+      transform: scale(1.2);
+      color: #00bcd4;
+    }
+
+    @keyframes floatIcon {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+      100% { transform: translateY(0); }
+    }
+
+    footer {
+      background-color: #3e2723;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      z-index: 100;
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <div>
-            <a href="travel_recommendation.html">Home</a>
-            <a href="about_us.html">About Us</a>
-            <a href="contact_us.html">Contact Us</a>
-        </div>
-        <div class="search-container">
-            <input type="text" id="search-input" placeholder="Search (e.g. beach, temple, Japan)" />
-            <button id="search-button">Search</button>
-            <button id="clear-button">Clear</button>
-        </div>
-    </nav>
 
-    <section style="padding: 40px;">
-        <h1>Welcome to Travel Explorer</h1>
-        <p>Discover amazing destinations around the world. Search for beaches, temples, or countries to get personalized travel recommendations with current time info.</p>
-    </section>
+  <nav>
+    <div style="display: flex; align-items: center; gap: 15px;">
+      <img src="images/travel_boom.png" alt="Travel Boom Logo">
+      <div>
+        <a href="travel_recommendation.html">Home</a>
+        <a href="about_us.html">About Us</a>
+        <a href="contact_us.html">Contact Us</a>
+      </div>
+    </div>
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search (e.g. beach, temple, Japan)" />
+      <button id="search-button">Search</button>
+      <button id="clear-button">Clear</button>
+    </div>
+  </nav>
 
-    <div id="results"></div>
+  <div class="carousel">
+    <img src="images/slider1.jpg" alt="Scenic Destination">
+    <img src="images/slider2.jpg" alt="African savanna">
+  </div>
 
-    <script src="main.js"></script>
+  <section class="parallax-section">
+    <div class="parallax-text">
+      <h1 style="font-size: 3em;">Welcome to <span style="color: #00bcd4;">Travel Boom</span></h1>
+      <p style="font-size: 1.3em;">Explore breathtaking places around the world — beaches, temples, nature escapes — personalized just for you with real-time insights. Let's travel smart!</p>
+    </div>
+  </section>
+
+  <div class="social-floating">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="#"><i class="fab fa-whatsapp"></i></a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Travel Boom | <i class="fas fa-cookie-bite"></i> Cookies enabled</p>
+  </footer>
+
+  <script src="travel_recommendation.js"></script>
 </body>
 </html>

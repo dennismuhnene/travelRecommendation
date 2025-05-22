@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - Travel Boom</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('images/background1.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #2F2F2F;
+    }
+
+    nav {
+      background-color: rgba(47, 47, 47, 0.9);
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #A0522D;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .contact-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .contact-header img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid #228B22;
+    }
+
+    .contact-header h1 {
+      font-size: 2em;
+      margin: 0;
+      color: #2F2F2F;
+    }
+
+    .contact-header p {
+      margin: 5px 0 0 0;
+      font-size: 1em;
+      color: #444;
+    }
+
+    form {
+      margin-top: 30px;
+    }
+
+    label {
+      font-weight: 600;
+      color: #333;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+
+    button {
+      background-color: #A0522D;
+      color: #fff;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #228B22;
+    }
+
+    .form-icon {
+      margin-right: 8px;
+      color: #228B22;
+    }
+
+    /* Footer (Optional - can be added) */
+    footer {
+      text-align: center;
+      color: white;
+      padding: 15px;
+      background-color: rgba(0, 0, 0, 0.5);
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div>
+      <a href="travel_recommendation.html"><i class="fas fa-globe form-icon"></i>Home</a>
+      <a href="about_us.html"><i class="fas fa-info-circle form-icon"></i>About Us</a>
+      <a href="./contact_us.html"><i class="fas fa-envelope form-icon"></i>Contact Us</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="contact-header">
+      <img src="https://ui-avatars.com/api/?name=Travel+Support&background=228B22&color=fff" alt="Contact Avatar">
+      <div>
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Fill out the form below.</p>
+      </div>
+    </div>
+
+    <form>
+      <label for="name"><i class="fas fa-user form-icon"></i>Name:</label>
+      <input type="text" id="name" placeholder="Your name" required>
+
+      <label for="email"><i class="fas fa-envelope form-icon"></i>Email:</label>
+      <input type="email" id="email" placeholder="Your email" required>
+
+      <label for="message"><i class="fas fa-comment-alt form-icon"></i>Message:</label>
+      <textarea id="message" rows="5" placeholder="Your message" required></textarea>
+
+      <button type="submit"><i class="fas fa-paper-plane form-icon"></i>Submit</button>
+    </form>
+  </div>
+
+  <!-- Optional footer -->
+  <footer>
+    &copy; 2025 Travel Boom. All rights reserved.
+  </footer>
+
+</body>
+</html>

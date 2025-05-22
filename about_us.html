@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us - Travel Explorer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root {
+      --savanna: #C19A6B;
+      --jungle: #29AB87;
+      --sky: #87CEEB;
+      --volcano: #5C4033;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Raleway', sans-serif;
+      background: linear-gradient(to bottom, var(--sky), #fff);
+      color: var(--volcano);
+    }
+
+    nav {
+      background-color: var(--jungle);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--savanna);
+    }
+
+    .video-banner {
+      position: relative;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .video-banner video {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .video-banner .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    .overlay h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .overlay p {
+      font-size: 1.1rem;
+    }
+
+    .team-section {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .team-section h2 {
+      color: var(--jungle);
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .team-card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .team-card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    .team-card strong {
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      color: var(--volcano);
+    }
+
+    .team-card span {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.95rem;
+    }
+
+    .team-card i {
+      margin-top: 10px;
+      color: var(--jungle);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      background-color: #eee;
+      color: #555;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div>
+      <a href="travel_recommendation.html">Home</a>
+      <a href="about_us.html">About Us</a>
+      <a href="contact_us.html">Contact Us</a>
+    </div>
+  </nav>
+
+  <!-- Video Banner -->
+  <section class="video-banner">
+    <video autoplay muted loop>
+      <source src="https://www.videvo.net/videvo_files/converted/2016_08/preview/160721_089_Timelapse_HD_05.mp497294.webm" type="video/webm">
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay animate__animated animate__fadeIn">
+      <h1>About Travel Explorer</h1>
+      <p>Helping travelers explore the world — one adventure at a time.</p>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section">
+    <h2 class="animate__animated animate__fadeInUp">Meet Our Team</h2>
+    <div class="team-grid">
+
+      <div class="team-card animate__animated animate__fadeInUp">
+        <img src="https://ui-avatars.com/api/?name=Alex+Mwaria&background=C19A6B&color=fff" alt="Alex Mwaria">
+        <strong>Alex Mwaria</strong>
+        <span>Founder & CEO</span>
+        <i data-lucide="compass"></i>
+      </div>
+
+      <div class="team-card animate__animated animate__fadeInUp animate__delay-1s">
+        <img src="https://ui-avatars.com/api/?name=Sara+Mila&background=29AB87&color=fff" alt="Sara Mila">
+        <strong>Sara Mila</strong>
+        <span>Chief Operating Officer</span>
+        <i data-lucide="code"></i>
+      </div>
+
+      <div class="team-card animate__animated animate__fadeInUp animate__delay-2s">
+        <img src="https://ui-avatars.com/api/?name=Michael+Suluhu&background=87CEEB&color=fff" alt="Michael Suluhu">
+        <strong>Michael Suluhu</strong>
+        <span>Director- Sales & Marketing</span>
+        <i data-lucide="brush"></i>
+      </div>
+
+      <div class="team-card animate__animated animate__fadeInUp animate__delay-3s">
+        <img src="https://ui-avatars.com/api/?name=Priya+Patel&background=5C4033&color=fff" alt="Priya Patel">
+        <strong>Priya Patel</strong>
+        <span>Content Strategist</span>
+        <i data-lucide="book-text"></i>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Travel Explorer. All rights reserved.
+  </footer>
+
+  <!-- Lucide Init -->
+  <script>
+    lucide.createIcons();
+  </script>
+
+</body>
+</html>

@@ -6,12 +6,12 @@
         "cities": [
           {
             "name": "Sydney, Australia",
-            "imageUrl": "enter_your_image_for_sydney.jpg",
+            "imageUrl": "images/sydney.jpg",
             "description": "A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge."
           },
           {
             "name": "Melbourne, Australia",
-            "imageUrl": "enter_your_image_for_melbourne.jpg",
+            "imageUrl": "images/melbourne.jpg",
             "description": "A cultural hub famous for its art, food, and diverse neighborhoods."
           }
         ]
@@ -22,12 +22,12 @@
         "cities": [
           {
             "name": "Tokyo, Japan",
-            "imageUrl": "enter_your_image_for_tokyo.jpg",
+            "imageUrl": "images/tokyo.jpg",
             "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture."
           },
           {
             "name": "Kyoto, Japan",
-            "imageUrl": "enter_your_image_for_kyoto.jpg",
+            "imageUrl": "images/kyoto.jpg",
             "description": "Known for its historic temples, gardens, and traditional tea houses."
           }
         ]
@@ -38,12 +38,12 @@
         "cities": [
           {
             "name": "Rio de Janeiro, Brazil",
-            "imageUrl": "enter_your_image_for_rio.jpg",
+            "imageUrl": "images/rio.jpg",
             "description": "A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks."
           },
           {
             "name": "São Paulo, Brazil",
-            "imageUrl": "enter_your_image_for_sao-paulo.jpg",
+            "imageUrl": "images/sao_paulo.jpg",
             "description": "The financial hub with diverse culture, arts, and a vibrant nightlife."
           }
         ]
@@ -54,12 +54,12 @@
         "cities": [
           {
             "name": "Rome, Italy",
-            "imageUrl": "enter_your_image_for_rome.jpg",
+            "imageUrl": "images/rome.jpg",
             "description": "The capital city known for its rich history, ancient ruins, and vibrant street life."
           },
           {
             "name": "Venice, Italy",
-            "imageUrl": "enter_your_image_for_venice.jpg",
+            "imageUrl": "images/venice.jpg",
             "description": "A romantic city built on canals, famous for its gondolas and Renaissance art."
           }
         ]
@@ -69,13 +69,13 @@
       {
         "id": 1,
         "name": "Angkor Wat, Cambodia",
-        "imageUrl": "enter_your_image_for_angkor-wat.jpg",
+        "imageUrl": "images/angkor_wat.jpg",
         "description": "A UNESCO World Heritage site and the largest religious monument in the world."
       },
       {
         "id": 2,
         "name": "Taj Mahal, India",
-        "imageUrl": "enter_your_image_for_taj-mahal.jpg",
+        "imageUrl": "images/taj_mahal.jpg",
         "description": "An iconic symbol of love and a masterpiece of Mughal architecture."
       }
     ],
@@ -83,13 +83,13 @@
       {
         "id": 1,
         "name": "Bora Bora, French Polynesia",
-        "imageUrl": "enter_your_image_for_bora-bora.jpg",
+        "imageUrl": "images/bora_bora.jpg",
         "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows."
       },
       {
         "id": 2,
         "name": "Copacabana Beach, Brazil",
-        "imageUrl": "enter_your_image_for_copacabana.jpg",
+        "imageUrl": "images/copacabana.jpg",
         "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views."
       }
     ],
@@ -100,27 +100,27 @@
         "places": [
           {
             "name": "Maasai Mara National Reserve, Kenya",
-            "imageUrl": "image_of_Maasai_Mara_safari.jpg",
+            "imageUrl": "images/maasai_mara_safari.jpg",
             "description": "World-renowned for its Great Migration, the Mara offers one of the best safari experiences on the continent. Expect incredible sightings of lions, cheetahs, and wildebeests."
           },
           {
             "name": "Zanzibar, Tanzania",
-            "imageUrl": "image_of_Zanzibar_beach.jpg",
+            "imageUrl": "images/zanzibar_beach.jpg",
             "description": "A tropical paradise known for its white sand beaches, historic Stone Town, and Swahili culture."
           },
           {
             "name": "Bwindi Impenetrable Forest, Uganda",
-            "imageUrl": "image_of_gorilla_trekking_in_Bwindi.jpg",
+            "imageUrl": "images/gorilla_trekking_bwindi.jpg",
             "description": "Home to nearly half the world’s mountain gorillas, Bwindi offers unforgettable trekking adventures."
           },
           {
             "name": "Lalibela, Ethiopia",
-            "imageUrl": "image_of_Lalibela_churches.jpg",
+            "imageUrl": "images/lalibela_churches.jpg",
             "description": "Famous for its rock-hewn churches carved into red volcanic rock, a marvel of medieval engineering and spirituality."
           },
           {
             "name": "Mount Kenya, Kenya",
-            "imageUrl": "image_of_Mount_Kenya.jpg",
+            "imageUrl": "images/mount_kenya.jpg",
             "description": "Africa’s second-highest peak offers alpine climbing, scenic hikes, and diverse flora and fauna."
           }
         ]
@@ -131,22 +131,22 @@
         "places": [
           {
             "name": "Virunga National Park, DRC",
-            "imageUrl": "image_of_Virunga_National_Park.jpg",
+            "imageUrl": "images/virunga_national_park.jpg",
             "description": "Africa’s oldest national park, home to mountain gorillas, volcanoes, and diverse landscapes."
           },
           {
             "name": "Loango National Park, Gabon",
-            "imageUrl": "image_of_elephants_on_Loango_beach.jpg",
+            "imageUrl": "images/elephants_loango_beach.jpg",
             "description": "A rare place where you can see elephants, buffaloes, and hippos on the beach, along with rich marine life."
           },
           {
             "name": "Dzanga-Sangha Reserve, Central African Republic",
-            "imageUrl": "image_of_Dzanga-Sangha_wildlife.jpg",
+            "imageUrl": "images/dzanga_sangha_wildlife.jpg",
             "description": "A biodiversity hotspot famous for forest elephants and lowland gorillas, with strong community conservation programs."
           },
           {
             "name": "Odzala-Kokoua National Park, Republic of Congo",
-            "imageUrl": "image_of_Odzala_forest_and_wildlife.jpg",
+            "imageUrl": "images/odzala_forest_wildlife.jpg",
             "description": "A pristine rainforest offering remote safaris and unique sightings of forest elephants and gorillas."
           }
         ]
@@ -157,32 +157,32 @@
         "places": [
           {
             "name": "Victoria Falls, Zimbabwe/Zambia",
-            "imageUrl": "image_of_Victoria_Falls.jpg",
+            "imageUrl": "images/victoria_falls.jpg",
             "description": "One of the world’s largest waterfalls, locally known as “The Smoke That Thunders.” A must-see natural wonder."
           },
           {
             "name": "Okavango Delta, Botswana",
-            "imageUrl": "image_of_Okavango_Delta_aerial_view.jpg",
+            "imageUrl": "images/okavango_delta_aerial.jpg",
             "description": "A UNESCO World Heritage Site known for its seasonal floodplains and exceptional wildlife safaris."
           },
           {
             "name": "Bazaruto Archipelago, Mozambique",
-            "imageUrl": "image_of_Bazaruto_island_beaches.jpg",
+            "imageUrl": "images/bazaruto_island_beaches.jpg",
             "description": "Stunning coral islands with crystal-clear waters, perfect for snorkeling, diving, and relaxation."
           },
           {
             "name": "Namib Desert, Namibia",
-            "imageUrl": "image_of_Namib_Desert_dunes.jpg",
+            "imageUrl": "images/namib_desert_dunes.jpg",
             "description": "Famous for its towering red dunes at Sossusvlei and dramatic desert landscapes."
           },
           {
             "name": "Table Mountain, South Africa",
-            "imageUrl": "image_of_Table_Mountain_from_below.jpg",
+            "imageUrl": "images/table_mountain_below.jpg",
             "description": "Iconic flat-topped mountain in Cape Town offering panoramic views and accessible hiking trails."
           },
           {
             "name": "Lake Malawi, Malawi",
-            "imageUrl": "image_of_Lake_Malawi_shoreline.jpg",
+            "imageUrl": "images/lake_malawi_shoreline.jpg",
             "description": "Known as the \"Calendar Lake,\" it features vibrant freshwater fish species and relaxing beaches."
           }
         ]
