@@ -1,0 +1,192 @@
+{
+    "countries": [
+      {
+        "id": 1,
+        "name": "Australia",
+        "cities": [
+          {
+            "name": "Sydney, Australia",
+            "imageUrl": "enter_your_image_for_sydney.jpg",
+            "description": "A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge."
+          },
+          {
+            "name": "Melbourne, Australia",
+            "imageUrl": "enter_your_image_for_melbourne.jpg",
+            "description": "A cultural hub famous for its art, food, and diverse neighborhoods."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Japan",
+        "cities": [
+          {
+            "name": "Tokyo, Japan",
+            "imageUrl": "enter_your_image_for_tokyo.jpg",
+            "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture."
+          },
+          {
+            "name": "Kyoto, Japan",
+            "imageUrl": "enter_your_image_for_kyoto.jpg",
+            "description": "Known for its historic temples, gardens, and traditional tea houses."
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Brazil",
+        "cities": [
+          {
+            "name": "Rio de Janeiro, Brazil",
+            "imageUrl": "enter_your_image_for_rio.jpg",
+            "description": "A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks."
+          },
+          {
+            "name": "São Paulo, Brazil",
+            "imageUrl": "enter_your_image_for_sao-paulo.jpg",
+            "description": "The financial hub with diverse culture, arts, and a vibrant nightlife."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Italy",
+        "cities": [
+          {
+            "name": "Rome, Italy",
+            "imageUrl": "enter_your_image_for_rome.jpg",
+            "description": "The capital city known for its rich history, ancient ruins, and vibrant street life."
+          },
+          {
+            "name": "Venice, Italy",
+            "imageUrl": "enter_your_image_for_venice.jpg",
+            "description": "A romantic city built on canals, famous for its gondolas and Renaissance art."
+          }
+        ]
+      }
+    ],
+    "temples": [
+      {
+        "id": 1,
+        "name": "Angkor Wat, Cambodia",
+        "imageUrl": "enter_your_image_for_angkor-wat.jpg",
+        "description": "A UNESCO World Heritage site and the largest religious monument in the world."
+      },
+      {
+        "id": 2,
+        "name": "Taj Mahal, India",
+        "imageUrl": "enter_your_image_for_taj-mahal.jpg",
+        "description": "An iconic symbol of love and a masterpiece of Mughal architecture."
+      }
+    ],
+    "beaches": [
+      {
+        "id": 1,
+        "name": "Bora Bora, French Polynesia",
+        "imageUrl": "enter_your_image_for_bora-bora.jpg",
+        "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows."
+      },
+      {
+        "id": 2,
+        "name": "Copacabana Beach, Brazil",
+        "imageUrl": "enter_your_image_for_copacabana.jpg",
+        "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views."
+      }
+    ],
+    "africanDestinations": [
+      {
+        "id": 1,
+        "region": "East Africa",
+        "places": [
+          {
+            "name": "Maasai Mara National Reserve, Kenya",
+            "imageUrl": "image_of_Maasai_Mara_safari.jpg",
+            "description": "World-renowned for its Great Migration, the Mara offers one of the best safari experiences on the continent. Expect incredible sightings of lions, cheetahs, and wildebeests."
+          },
+          {
+            "name": "Zanzibar, Tanzania",
+            "imageUrl": "image_of_Zanzibar_beach.jpg",
+            "description": "A tropical paradise known for its white sand beaches, historic Stone Town, and Swahili culture."
+          },
+          {
+            "name": "Bwindi Impenetrable Forest, Uganda",
+            "imageUrl": "image_of_gorilla_trekking_in_Bwindi.jpg",
+            "description": "Home to nearly half the world’s mountain gorillas, Bwindi offers unforgettable trekking adventures."
+          },
+          {
+            "name": "Lalibela, Ethiopia",
+            "imageUrl": "image_of_Lalibela_churches.jpg",
+            "description": "Famous for its rock-hewn churches carved into red volcanic rock, a marvel of medieval engineering and spirituality."
+          },
+          {
+            "name": "Mount Kenya, Kenya",
+            "imageUrl": "image_of_Mount_Kenya.jpg",
+            "description": "Africa’s second-highest peak offers alpine climbing, scenic hikes, and diverse flora and fauna."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "region": "Central Africa",
+        "places": [
+          {
+            "name": "Virunga National Park, DRC",
+            "imageUrl": "image_of_Virunga_National_Park.jpg",
+            "description": "Africa’s oldest national park, home to mountain gorillas, volcanoes, and diverse landscapes."
+          },
+          {
+            "name": "Loango National Park, Gabon",
+            "imageUrl": "image_of_elephants_on_Loango_beach.jpg",
+            "description": "A rare place where you can see elephants, buffaloes, and hippos on the beach, along with rich marine life."
+          },
+          {
+            "name": "Dzanga-Sangha Reserve, Central African Republic",
+            "imageUrl": "image_of_Dzanga-Sangha_wildlife.jpg",
+            "description": "A biodiversity hotspot famous for forest elephants and lowland gorillas, with strong community conservation programs."
+          },
+          {
+            "name": "Odzala-Kokoua National Park, Republic of Congo",
+            "imageUrl": "image_of_Odzala_forest_and_wildlife.jpg",
+            "description": "A pristine rainforest offering remote safaris and unique sightings of forest elephants and gorillas."
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "region": "Southern Africa",
+        "places": [
+          {
+            "name": "Victoria Falls, Zimbabwe/Zambia",
+            "imageUrl": "image_of_Victoria_Falls.jpg",
+            "description": "One of the world’s largest waterfalls, locally known as “The Smoke That Thunders.” A must-see natural wonder."
+          },
+          {
+            "name": "Okavango Delta, Botswana",
+            "imageUrl": "image_of_Okavango_Delta_aerial_view.jpg",
+            "description": "A UNESCO World Heritage Site known for its seasonal floodplains and exceptional wildlife safaris."
+          },
+          {
+            "name": "Bazaruto Archipelago, Mozambique",
+            "imageUrl": "image_of_Bazaruto_island_beaches.jpg",
+            "description": "Stunning coral islands with crystal-clear waters, perfect for snorkeling, diving, and relaxation."
+          },
+          {
+            "name": "Namib Desert, Namibia",
+            "imageUrl": "image_of_Namib_Desert_dunes.jpg",
+            "description": "Famous for its towering red dunes at Sossusvlei and dramatic desert landscapes."
+          },
+          {
+            "name": "Table Mountain, South Africa",
+            "imageUrl": "image_of_Table_Mountain_from_below.jpg",
+            "description": "Iconic flat-topped mountain in Cape Town offering panoramic views and accessible hiking trails."
+          },
+          {
+            "name": "Lake Malawi, Malawi",
+            "imageUrl": "image_of_Lake_Malawi_shoreline.jpg",
+            "description": "Known as the \"Calendar Lake,\" it features vibrant freshwater fish species and relaxing beaches."
+          }
+        ]
+      }
+    ]
+  }
+  

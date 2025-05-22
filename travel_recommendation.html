@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Explorer</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .search-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        #results {
+            margin: 20px;
+        }
+
+        .place-card {
+            background-color: rgba(255, 255, 255, 0.85);
+            color: #333;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        .place-card img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <a href="travel_recommendation.html">Home</a>
+            <a href="about_us.html">About Us</a>
+            <a href="contact_us.html">Contact Us</a>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search (e.g. beach, temple, Japan)" />
+            <button id="search-button">Search</button>
+            <button id="clear-button">Clear</button>
+        </div>
+    </nav>
+
+    <section style="padding: 40px;">
+        <h1>Welcome to Travel Explorer</h1>
+        <p>Discover amazing destinations around the world. Search for beaches, temples, or countries to get personalized travel recommendations with current time info.</p>
+    </section>
+
+    <div id="results"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>
