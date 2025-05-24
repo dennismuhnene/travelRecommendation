@@ -95,7 +95,7 @@
 
     .parallax-section {
       position: relative;
-      height: 100vh;
+      height: 40pxvh;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -124,13 +124,13 @@
       border-radius: 12px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.3);
       animation: fadeIn 2s ease-in-out;
-      height: 300px; /* Smaller carousel */
+      height: 300px;
     }
 
     .carousel img {
       width: 100%;
       object-fit: cover;
-      height: 300px; /* Match height */
+      height: 300px;
       transition: transform 1s ease-in-out;
       animation: slideIn 6s infinite alternate;
     }
@@ -201,6 +201,48 @@
       font-size: 0.9em;
     }
 
+    .booking-section {
+      padding: 40px 20px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    .booking-section h2 {
+      margin-bottom: 10px;
+      color: #3e2723;
+    }
+
+    .booking-section p {
+      font-size: 1em;
+      margin-bottom: 20px;
+    }
+
+    .booking-form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .booking-form input, .booking-form button {
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .booking-form button {
+      background-color: #3e2723;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .booking-form button:hover {
+      background-color: #1b1311;
+    }
+
     footer {
       background-color: #3e2723;
       color: white;
@@ -219,7 +261,7 @@
       <span style="color: white; font-weight: bold; font-size: 1.1em;">Travel Boom</span>
     </div>
     <div class="center-nav">
-      <a href="index.html" class="active">Home</a>
+      <a href="travel_recommendation.html" class="active">Home</a>
       <a href="about_us.html">About Us</a>
       <a href="contact_us.html">Contact Us</a>
     </div>
@@ -232,8 +274,8 @@
 
   <div class="carousel">
     <img src="images/slider1.jpg" alt="Scenic Destination">
-    <img src="images/slider2.jpg" alt="African savanna">
-    <img src="images/slider3.jpg" alt="Moutain snow">
+    <img src="images/slider2.jpg" alt="African Savanna">
+    <img src="images/slider3.jpg" alt="Mountain Snow">
   </div>
 
   <section class="parallax-section">
@@ -244,6 +286,19 @@
   </section>
 
   <div id="results"></div>
+
+  <div class="booking-section">
+    <button onclick="document.getElementById('booking-form').scrollIntoView({ behavior: 'smooth' });">Book Now</button>
+    <p>Fill the following information and our customer experience team will contact you shortly...</p>
+
+    <form id="booking-form" class="booking-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email Address" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="text" name="destination" placeholder="Preferred Destination" required>
+      <button type="submit">Submit for Booking</button>
+    </form>
+  </div>
 
   <div class="social-floating">
     <a href="#"><i class="fab fa-instagram"></i></a>

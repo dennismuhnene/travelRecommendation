@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function performSearch() {
     const keyword = searchInput.value.trim();
     if (!keyword) {
-      alert("Please enter a keyword to search (e.g., beach, temple, Japan).");
+      alert("Please enter a keyword to search (e.g., beach, temple, Japan, Africa).");
       return;
     }
 
