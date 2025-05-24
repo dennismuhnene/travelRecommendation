@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Contact Us - Travel Boom</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     body {
       margin: 0;
@@ -21,16 +21,33 @@
       justify-content: space-between;
     }
 
-    nav a {
+    /* Left side brand */
+    .nav-left .brand {
       color: white;
-      margin: 0 15px;
+      font-weight: 700;
+      font-size: 1.5em;
+      text-decoration: none;
+    }
+
+    /* Right side nav links */
+    .nav-right a {
+      color: white;
+      margin-left: 25px;
       text-decoration: none;
       font-weight: 500;
       transition: color 0.3s ease;
     }
 
-    nav a:hover {
+    .nav-right a:hover {
       color: #A0522D;
+    }
+
+    /* Active link style */
+    .nav-right a.active {
+      color: #A0522D;
+      font-weight: 700;
+      border-bottom: 2px solid #A0522D;
+      padding-bottom: 3px;
     }
 
     .container {
@@ -112,7 +129,7 @@
       color: #228B22;
     }
 
-    /* Footer (Optional - can be added) */
+    /* Footer (Optional) */
     footer {
       text-align: center;
       color: white;
@@ -125,16 +142,19 @@
 <body>
 
   <nav>
-    <div>
-      <a href="travel_recommendation.html"><i class="fas fa-globe form-icon"></i>Home</a>
-      <a href="about_us.html"><i class="fas fa-info-circle form-icon"></i>About Us</a>
-      <a href="./contact_us.html"><i class="fas fa-envelope form-icon"></i>Contact Us</a>
+    <div class="nav-left">
+      <a href="travel_recommendation.html" class="brand">Travel Boom</a>
+    </div>
+    <div class="nav-right">
+      <a href="travel_recommendation.html">Home</a>
+      <a href="about_us.html">About Us</a>
+      <a href="contact_us.html" class="active">Contact Us</a>
     </div>
   </nav>
 
   <div class="container">
     <div class="contact-header">
-      <img src="https://ui-avatars.com/api/?name=Travel+Support&background=228B22&color=fff" alt="Contact Avatar">
+      <img src="https://ui-avatars.com/api/?name=Travel+Support&background=228B22&color=fff" alt="Contact Avatar" />
       <div>
         <h1>Contact Us</h1>
         <p>We'd love to hear from you! Fill out the form below.</p>
@@ -143,10 +163,10 @@
 
     <form>
       <label for="name"><i class="fas fa-user form-icon"></i>Name:</label>
-      <input type="text" id="name" placeholder="Your name" required>
+      <input type="text" id="name" placeholder="Your name" required />
 
       <label for="email"><i class="fas fa-envelope form-icon"></i>Email:</label>
-      <input type="email" id="email" placeholder="Your email" required>
+      <input type="email" id="email" placeholder="Your email" required />
 
       <label for="message"><i class="fas fa-comment-alt form-icon"></i>Message:</label>
       <textarea id="message" rows="5" placeholder="Your message" required></textarea>
@@ -155,7 +175,6 @@
     </form>
   </div>
 
-  <!-- Optional footer -->
   <footer>
     &copy; 2025 Travel Boom. All rights reserved.
   </footer>

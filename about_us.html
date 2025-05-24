@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>About Us - Travel Explorer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <meta charset="UTF-8" />
+  <title>About Us - Travel Bloom</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+
   <!-- Animate.css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
     :root {
-      --savanna: #C19A6B;
-      --jungle: #29AB87;
-      --sky: #87CEEB;
-      --volcano: #5C4033;
+      --savanna: #c19a6b;
+      --jungle: #29ab87;
+      --sky: #87ceeb;
+      --volcano: #5c4033;
     }
 
     * {
@@ -28,7 +34,7 @@
 
     body {
       margin: 0;
-      font-family: 'Raleway', sans-serif;
+      font-family: "Raleway", sans-serif;
       background: linear-gradient(to bottom, var(--sky), #fff);
       color: var(--volcano);
     }
@@ -41,57 +47,89 @@
       align-items: center;
     }
 
-    nav a {
+    nav .logo {
       color: white;
-      margin: 0 15px;
+      font-weight: 600;
+      font-size: 1.3rem;
+      text-decoration: none;
+    }
+
+    nav .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav .nav-links a {
+      color: white;
       text-decoration: none;
       font-weight: 600;
       transition: color 0.3s ease;
+      position: relative;
+      padding-bottom: 3px;
     }
 
-    nav a:hover {
+    nav .nav-links a:hover {
       color: var(--savanna);
     }
 
-    .video-banner {
-      position: relative;
-      height: 300px;
-      overflow: hidden;
+    nav .nav-links a.active {
+      color: var(--savanna);
+      border-bottom: 2px solid var(--savanna);
     }
 
-    .video-banner video {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-    }
-
-    .video-banner .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.4);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
+    /* Container for About TravelBloom centered */
+    .about-center {
+      max-width: 700px;
+      margin: 50px auto 30px auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      color: var(--volcano);
+      padding: 30px 25px;
       text-align: center;
+      animation: fadeInUp 1s ease forwards;
     }
 
-    .overlay h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
+    .about-center h1 {
+      color: var(--jungle);
+      margin-bottom: 20px;
+      font-weight: 600;
     }
 
-    .overlay p {
+    .about-center p {
       font-size: 1.1rem;
+      line-height: 1.6;
     }
 
+    /* Container for Our Story left aligned */
+    .our-story {
+      max-width: 800px;
+      margin: 40px auto 60px auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      color: var(--volcano);
+      padding: 30px 35px;
+      text-align: left;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .our-story h2 {
+      color: var(--jungle);
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .our-story p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    /* Team Section unchanged */
     .team-section {
       max-width: 1000px;
-      margin: 50px auto;
+      margin: 50px auto 50px auto;
       padding: 0 20px;
     }
 
@@ -111,14 +149,14 @@
       background-color: white;
       padding: 20px;
       border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .team-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 
     .team-card img {
@@ -157,73 +195,112 @@
   </style>
 </head>
 <body>
-
   <!-- Navigation -->
   <nav>
-    <div>
+    <a href="travel_recommendation.html" class="logo">Travel Boom</a>
+    <div class="nav-links">
       <a href="travel_recommendation.html">Home</a>
-      <a href="about_us.html">About Us</a>
+      <a href="about_us.html" class="active">About Us</a>
       <a href="contact_us.html">Contact Us</a>
     </div>
   </nav>
 
-  <!-- Video Banner -->
-  <section class="video-banner">
-    <video autoplay muted loop>
-      <source src="https://www.videvo.net/videvo_files/converted/2016_08/preview/160721_089_Timelapse_HD_05.mp497294.webm" type="video/webm">
-      Your browser does not support the video tag.
-    </video>
-    <div class="overlay animate__animated animate__fadeIn">
-      <h1>About Travel Explorer</h1>
-      <p>Helping travelers explore the world — one adventure at a time.</p>
-    </div>
+  <!-- About TravelBloom centered -->
+  <section class="about-center">
+    <h1>About Travel Boom</h1>
+    <p>
+      We are passionate about helping travelers discover their perfect
+      destinations. Our mission is to provide personalized travel
+      recommendations that create unforgettable experiences and lasting
+      memories.
+    </p>
+  </section>
+
+  <!-- Our Story left aligned -->
+  <section class="our-story">
+    <h2>Our Story</h2>
+    <p>
+      Founded in 2020, Travel Boom was born from a simple idea: everyone
+      deserves to discover the perfect destination that speaks to their soul.
+      Our founders, avid travelers themselves, noticed that finding truly
+      personalized travel recommendations was often difficult and
+      time-consuming.
+    </p>
+
+    <p>
+      Today, we use advanced algorithms and local expertise to match travelers
+      with destinations that align with their interests, budget, and travel
+      style. Whether you're seeking adventure, relaxation, cultural
+      immersion, or spiritual enlightenment, we're here to guide you to your
+      ideal destination.
+    </p>
+
+    <p>
+      Our commitment to sustainable and responsible travel ensures that every
+      recommendation supports local communities and preserves the natural
+      beauty and cultural heritage of the destinations we promote.
+    </p>
   </section>
 
   <!-- Team Section -->
   <section class="team-section">
     <h2 class="animate__animated animate__fadeInUp">Meet Our Team</h2>
+    <p> Our dedicated team of travel experts and technology enthusiasts work tirelessly to bring you the best travel recommendations.</p>
     <div class="team-grid">
-
       <div class="team-card animate__animated animate__fadeInUp">
-        <img src="https://ui-avatars.com/api/?name=Alex+Mwaria&background=C19A6B&color=fff" alt="Alex Mwaria">
+        <img
+          src="https://ui-avatars.com/api/?name=Alex+Mwaria&background=C19A6B&color=fff"
+          alt="Alex Mwaria"
+        />
         <strong>Alex Mwaria</strong>
         <span>Founder & CEO</span>
         <i data-lucide="compass"></i>
       </div>
 
-      <div class="team-card animate__animated animate__fadeInUp animate__delay-1s">
-        <img src="https://ui-avatars.com/api/?name=Sara+Mila&background=29AB87&color=fff" alt="Sara Mila">
+      <div
+        class="team-card animate__animated animate__fadeInUp animate__delay-1s"
+      >
+        <img
+          src="https://ui-avatars.com/api/?name=Sara+Mila&background=29AB87&color=fff"
+          alt="Sara Mila"
+        />
         <strong>Sara Mila</strong>
         <span>Chief Operating Officer</span>
         <i data-lucide="code"></i>
       </div>
 
-      <div class="team-card animate__animated animate__fadeInUp animate__delay-2s">
-        <img src="https://ui-avatars.com/api/?name=Michael+Suluhu&background=87CEEB&color=fff" alt="Michael Suluhu">
+      <div
+        class="team-card animate__animated animate__fadeInUp animate__delay-2s"
+      >
+        <img
+          src="https://ui-avatars.com/api/?name=Michael+Suluhu&background=87CEEB&color=fff"
+          alt="Michael Suluhu"
+        />
         <strong>Michael Suluhu</strong>
-        <span>Director- Sales & Marketing</span>
+        <span>Head of Destinations</span>
         <i data-lucide="brush"></i>
       </div>
 
-      <div class="team-card animate__animated animate__fadeInUp animate__delay-3s">
-        <img src="https://ui-avatars.com/api/?name=Priya+Patel&background=5C4033&color=fff" alt="Priya Patel">
+      <div
+        class="team-card animate__animated animate__fadeInUp animate__delay-3s"
+      >
+        <img
+          src="https://ui-avatars.com/api/?name=Priya+Patel&background=5C4033&color=fff"
+          alt="Priya Patel"
+        />
         <strong>Priya Patel</strong>
         <span>Content Strategist</span>
         <i data-lucide="book-text"></i>
       </div>
-
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    &copy; 2025 Travel Explorer. All rights reserved.
-  </footer>
+  <footer>&copy; 2025 TravelBloom. All rights reserved.</footer>
 
   <!-- Lucide Init -->
   <script>
     lucide.createIcons();
   </script>
-
 </body>
 </html>

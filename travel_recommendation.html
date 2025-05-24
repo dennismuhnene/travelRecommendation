@@ -36,7 +36,21 @@
       height: 50px;
     }
 
-    nav a {
+    .left-nav {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .center-nav {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 15px;
+    }
+
+    .center-nav a {
       color: white;
       margin: 0 12px;
       text-decoration: none;
@@ -44,8 +58,13 @@
       font-size: 1em;
     }
 
-    nav a:hover {
+    .center-nav a:hover {
       color: #00bcd4;
+    }
+
+    .center-nav a.active {
+      color: #00bcd4;
+      text-decoration: underline;
     }
 
     .search-container {
@@ -105,10 +124,13 @@
       border-radius: 12px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.3);
       animation: fadeIn 2s ease-in-out;
+      height: 300px; /* Smaller carousel */
     }
 
     .carousel img {
       width: 100%;
+      object-fit: cover;
+      height: 300px; /* Match height */
       transition: transform 1s ease-in-out;
       animation: slideIn 6s infinite alternate;
     }
@@ -146,6 +168,39 @@
       100% { transform: translateY(0); }
     }
 
+    #results {
+      padding: 40px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .result-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      max-width: 300px;
+      text-align: center;
+    }
+
+    .result-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .result-card h3 {
+      margin: 10px 0;
+      color: #3e2723;
+    }
+
+    .result-card p {
+      padding: 0 10px 10px;
+      font-size: 0.9em;
+    }
+
     footer {
       background-color: #3e2723;
       color: white;
@@ -159,24 +214,26 @@
 <body>
 
   <nav>
-    <div style="display: flex; align-items: center; gap: 15px;">
+    <div class="left-nav">
       <img src="images/travel_boom.png" alt="Travel Boom Logo">
-      <div>
-        <a href="travel_recommendation.html">Home</a>
-        <a href="about_us.html">About Us</a>
-        <a href="contact_us.html">Contact Us</a>
-      </div>
+      <span style="color: white; font-weight: bold; font-size: 1.1em;">Travel Boom</span>
+    </div>
+    <div class="center-nav">
+      <a href="travel_recommendation.html" class="active">Home</a>
+      <a href="about_us.html">About Us</a>
+      <a href="contact_us.html">Contact Us</a>
     </div>
     <div class="search-container">
       <input type="text" id="search-input" placeholder="Search (e.g. beach, temple, Japan)" />
       <button id="search-button">Search</button>
-      <button id="clear-button">Clear</button>
+      <button id="clear-button">Reset</button>
     </div>
   </nav>
 
   <div class="carousel">
     <img src="images/slider1.jpg" alt="Scenic Destination">
     <img src="images/slider2.jpg" alt="African savanna">
+    <img src="images/slider3.jpg" alt="Moutain snow">
   </div>
 
   <section class="parallax-section">
@@ -185,6 +242,8 @@
       <p style="font-size: 1.3em;">Explore breathtaking places around the world — beaches, temples, nature escapes — personalized just for you with real-time insights. Let's travel smart!</p>
     </div>
   </section>
+
+  <div id="results"></div>
 
   <div class="social-floating">
     <a href="#"><i class="fab fa-instagram"></i></a>
