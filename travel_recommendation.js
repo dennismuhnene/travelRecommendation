@@ -29,88 +29,100 @@ document.addEventListener("DOMContentLoaded", () => {
       resultsContainer.innerHTML = `<p style="color:red;">Failed to load recommendations data.</p>`;
     });
 
-  function flattenRecommendations(data) {
-    const flatList = [];
-
-    // Flatten countries -> cities
-    data.countries.forEach((country) => {
-      country.cities.forEach((city) => {
-        flatList.push({
-          type: "country",
-          country: country.name,
-          name: city.name,
-          imageUrl: city.imageUrl,
-          description: city.description,
-          timeZone: null // Optional: add actual timezones if available
-        });
-      });
-    });
-
-    // Flatten temples
-    data.temples.forEach((temple) => {
-      flatList.push({
-        type: "temple",
-        country: temple.name.split(", ").pop(),
-        name: temple.name,
-        imageUrl: temple.imageUrl,
-        description: temple.description,
-        timeZone: null
-      });
-    });
-
-    // Flatten beaches
-    data.beaches.forEach((beach) => {
-      flatList.push({
-        type: "beach",
-        country: beach.name.split(", ").pop(),
-        name: beach.name,
-        imageUrl: beach.imageUrl,
-        description: beach.description,
-        timeZone: null
-      });
-    });
-
-    // --- NEW: Flatten africanDestinations ---
-    if (data.africanDestinations && Array.isArray(data.africanDestinations)) {
-      data.africanDestinations.forEach((region) => {
-        region.places.forEach((place) => {
-          flatList.push({
-            type: "africanDestination",
-            region: region.region,          // Region name, e.g. "East Africa"
-            country: null,                  // Could be added if you want; currently null
-            name: place.name,
-            imageUrl: place.imageUrl,
-            description: place.description,
-            timeZone: null
+    function flattenRecommendations(data) {
+        const flatList = [];
+      
+        const cityTimeZones = {
+          "Tokyo": "Asia/Tokyo",
+          "Paris": "Europe/Paris",
+          "New York": "America/New_York",
+          "Bangkok": "Asia/Bangkok",
+          "Cairo": "Africa/Cairo",
+          "Nairobi": "Africa/Nairobi",
+          "Cape Town": "Africa/Johannesburg"
+          // Add more as needed
+        };
+      
+        data.countries.forEach((country) => {
+          country.cities.forEach((city) => {
+            flatList.push({
+              type: "country",
+              country: country.name,
+              name: city.name,
+              imageUrl: city.imageUrl,
+              description: city.description,
+              timeZone: cityTimeZones[city.name] || null
+            });
           });
         });
-      });
-    }
-
-    return flatList;
-  }
-
+      
+        data.temples.forEach((temple) => {
+          flatList.push({
+            type: "temple",
+            country: temple.name.split(", ").pop(),
+            name: temple.name,
+            imageUrl: temple.imageUrl,
+            description: temple.description,
+            timeZone: cityTimeZones[temple.name.split(",")[0]] || null
+          });
+        });
+      
+        data.beaches.forEach((beach) => {
+          flatList.push({
+            type: "beach",
+            country: beach.name.split(", ").pop(),
+            name: beach.name,
+            imageUrl: beach.imageUrl,
+            description: beach.description,
+            timeZone: cityTimeZones[beach.name.split(",")[0]] || null
+          });
+        });
+      
+        if (data.africanDestinations && Array.isArray(data.africanDestinations)) {
+          data.africanDestinations.forEach((region) => {
+            region.places.forEach((place) => {
+              flatList.push({
+                type: "africanDestination",
+                region: region.region,
+                country: null,
+                name: place.name,
+                imageUrl: place.imageUrl,
+                description: place.description,
+                timeZone: cityTimeZones[place.name] || null
+              });
+            });
+          });
+        }
+      
+        return flatList;
+      }
   const keywordsMap = {
     beach: ["beach", "beaches"],
     temple: ["temple", "temples"]
-    // You can add more type mappings if you want
   };
 
   function clearResults() {
     resultsContainer.innerHTML = "";
   }
 
-  function showTimeForTimeZone(timeZone) {
-    if (!timeZone) return "";
-    const options = {
-      timeZone: timeZone,
-      hour12: true,
-      hour: "numeric",
-      minute: "numeric",
-      second: "numeric"
-    };
-    const timeString = new Date().toLocaleTimeString("en-US", options);
-    return `<p><strong>Current local time:</strong> ${timeString}</p>`;
+  function showTimeForTimeZone(timeZone, timeElementId) {
+    if (!timeZone) return;
+
+    function updateTime() {
+      const options = {
+        timeZone: timeZone,
+        hour12: true,
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric"
+      };
+      const timeString = new Date().toLocaleTimeString("en-US", options);
+      const el = document.getElementById(timeElementId);
+      if (el) el.textContent = `Current local time: ${timeString}`;
+    }
+
+    updateTime();
+    setInterval(updateTime, 1000);
   }
 
   function filterRecommendations(keyword) {
@@ -118,7 +130,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     keyword = keyword.toLowerCase().trim();
 
-    // Check keyword mapping
     for (const key in keywordsMap) {
       if (keywordsMap[key].includes(keyword)) {
         return flatRecommendations.filter(
@@ -127,7 +138,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    // Additional: if keyword matches any african region name, filter by that region
     const africanRegions = flatRecommendations
       .filter(p => p.type === "africanDestination" && p.region)
       .map(p => p.region.toLowerCase());
@@ -140,7 +150,6 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     }
 
-    // Fallback: match country, region (for African destinations), or name
     return flatRecommendations.filter(
       (place) =>
         (place.country && place.country.toLowerCase().includes(keyword)) ||
@@ -157,8 +166,8 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    const displayed = results.slice(0, 4);
-    displayed.forEach((place) => {
+    const displayed = results.slice(0, 10);
+    displayed.forEach((place, index) => {
       const placeCard = document.createElement("div");
       placeCard.style.display = "flex";
       placeCard.style.gap = "20px";
@@ -183,8 +192,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const descEl = document.createElement("p");
       descEl.textContent = place.description;
 
-      const timeEl = document.createElement("div");
-      timeEl.innerHTML = showTimeForTimeZone(place.timeZone);
+      const timeEl = document.createElement("p");
+      const timeId = `time-${index}`;
+      timeEl.id = timeId;
 
       infoDiv.appendChild(nameEl);
       infoDiv.appendChild(descEl);
@@ -194,10 +204,13 @@ document.addEventListener("DOMContentLoaded", () => {
       placeCard.appendChild(infoDiv);
 
       resultsContainer.appendChild(placeCard);
+
+      if (place.timeZone) {
+        showTimeForTimeZone(place.timeZone, timeId);
+      }
     });
   }
 
-  // Common search function to call from button or enter key
   function performSearch() {
     const keyword = searchInput.value.trim();
     if (!keyword) {
@@ -211,7 +224,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   searchButton.addEventListener("click", performSearch);
 
-  // *** Added: Trigger search on Enter key ***
   searchInput.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
       performSearch();

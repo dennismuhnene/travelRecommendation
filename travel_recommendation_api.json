@@ -7,12 +7,14 @@
           {
             "name": "Sydney, Australia",
             "imageUrl": "enter_your_image_for_sydney.jpg",
-            "description": "A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge."
+            "description": "A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge.",
+            "timeZone": "Australia/Sydney"
           },
           {
             "name": "Melbourne, Australia",
             "imageUrl": "enter_your_image_for_melbourne.jpg",
-            "description": "A cultural hub famous for its art, food, and diverse neighborhoods."
+            "description": "A cultural hub famous for its art, food, and diverse neighborhoods.",
+            "timeZone": "Australia/Melbourne"
           }
         ]
       },
@@ -23,12 +25,14 @@
           {
             "name": "Tokyo, Japan",
             "imageUrl": "enter_your_image_for_tokyo.jpg",
-            "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture."
+            "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture.",
+            "timeZone": "Asia/Tokyo"
           },
           {
             "name": "Kyoto, Japan",
             "imageUrl": "enter_your_image_for_kyoto.jpg",
-            "description": "Known for its historic temples, gardens, and traditional tea houses."
+            "description": "Known for its historic temples, gardens, and traditional tea houses.",
+            "timeZone": "Asia/Tokyo"
           }
         ]
       },
@@ -39,12 +43,14 @@
           {
             "name": "Rio de Janeiro, Brazil",
             "imageUrl": "enter_your_image_for_rio.jpg",
-            "description": "A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks."
+            "description": "A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks.",
+            "timeZone": "America/Sao_Paulo"
           },
           {
             "name": "São Paulo, Brazil",
             "imageUrl": "enter_your_image_for_sao-paulo.jpg",
-            "description": "The financial hub with diverse culture, arts, and a vibrant nightlife."
+            "description": "The financial hub with diverse culture, arts, and a vibrant nightlife.",
+            "timeZone": "America/Sao_Paulo"
           }
         ]
       }
@@ -54,13 +60,15 @@
         "id": 1,
         "name": "Angkor Wat, Cambodia",
         "imageUrl": "enter_your_image_for_angkor-wat.jpg",
-        "description": "A UNESCO World Heritage site and the largest religious monument in the world."
+        "description": "A UNESCO World Heritage site and the largest religious monument in the world.",
+        "timeZone": "Asia/Phnom_Penh"
       },
       {
         "id": 2,
         "name": "Taj Mahal, India",
         "imageUrl": "enter_your_image_for_taj-mahal.jpg",
-        "description": "An iconic symbol of love and a masterpiece of Mughal architecture."
+        "description": "An iconic symbol of love and a masterpiece of Mughal architecture.",
+        "timeZone": "Asia/Kolkata"
       }
     ],
     "beaches": [
@@ -68,13 +76,15 @@
         "id": 1,
         "name": "Bora Bora, French Polynesia",
         "imageUrl": "enter_your_image_for_bora-bora.jpg",
-        "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows."
+        "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows.",
+        "timeZone": "Pacific/Tahiti"
       },
       {
         "id": 2,
         "name": "Copacabana Beach, Brazil",
         "imageUrl": "enter_your_image_for_copacabana.jpg",
-        "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views."
+        "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views.",
+        "timeZone": "America/Sao_Paulo"
       }
     ],
     "africanDestinations": [
@@ -85,27 +95,32 @@
           {
             "name": "Maasai Mara National Reserve, Kenya",
             "imageUrl": "maasai_mara_safari.jpg",
-            "description": "World-renowned for its Great Migration, the Mara offers one of the best safari experiences on the continent. Expect incredible sightings of lions, cheetahs, and wildebeests."
+            "description": "World-renowned for its Great Migration, the Mara offers one of the best safari experiences on the continent. Expect incredible sightings of lions, cheetahs, and wildebeests.",
+            "timeZone": "Africa/Nairobi"
           },
           {
             "name": "Zanzibar, Tanzania",
             "imageUrl": "zanzibar_beach.jpg",
-            "description": "A tropical paradise known for its white sand beaches, historic Stone Town, and Swahili culture."
+            "description": "A tropical paradise known for its white sand beaches, historic Stone Town, and Swahili culture.",
+            "timeZone": "Africa/Dar_es_Salaam"
           },
           {
             "name": "Bwindi Impenetrable Forest, Uganda",
             "imageUrl": "gorilla_trekking_bwindi.jpg",
-            "description": "Home to nearly half the world’s mountain gorillas, Bwindi offers unforgettable trekking adventures."
+            "description": "Home to nearly half the world’s mountain gorillas, Bwindi offers unforgettable trekking adventures.",
+            "timeZone": "Africa/Kampala"
           },
           {
             "name": "Lalibela, Ethiopia",
             "imageUrl": "lalibela_churches.jpg",
-            "description": "Famous for its rock-hewn churches carved into red volcanic rock, a marvel of medieval engineering and spirituality."
+            "description": "Famous for its rock-hewn churches carved into red volcanic rock, a marvel of medieval engineering and spirituality.",
+            "timeZone": "Africa/Addis_Ababa"
           },
           {
             "name": "Mount Kenya, Kenya",
             "imageUrl": "mount_kenya.jpg",
-            "description": "Africa’s second-highest peak offers alpine climbing, scenic hikes, and diverse flora and fauna."
+            "description": "Africa’s second-highest peak offers alpine climbing, scenic hikes, and diverse flora and fauna.",
+            "timeZone": "Africa/Nairobi"
           }
         ]
       },
@@ -116,22 +131,26 @@
           {
             "name": "Virunga National Park, DRC",
             "imageUrl": "virunga_national_park.jpg",
-            "description": "Africa’s oldest national park, home to mountain gorillas, volcanoes, and diverse landscapes."
+            "description": "Africa’s oldest national park, home to mountain gorillas, volcanoes, and diverse landscapes.",
+            "timeZone": "Africa/Kinshasa"
           },
           {
             "name": "Loango National Park, Gabon",
             "imageUrl": "loango_national_park.jpg",
-            "description": "A rare place where you can see elephants, buffaloes, and hippos on the beach, along with rich marine life."
+            "description": "A rare place where you can see elephants, buffaloes, and hippos on the beach, along with rich marine life.",
+            "timeZone": "Africa/Libreville"
           },
           {
             "name": "Dzanga-Sangha Reserve, Central African Republic",
             "imageUrl": "dzanga_sangha_wildlife.jpg",
-            "description": "A biodiversity hotspot famous for forest elephants and lowland gorillas, with strong community conservation programs."
+            "description": "A biodiversity hotspot famous for forest elephants and lowland gorillas, with strong community conservation programs.",
+            "timeZone": "Africa/Bangui"
           },
           {
             "name": "Odzala-Kokoua National Park, Republic of Congo",
             "imageUrl": "odzala_forest_wildlife.jpg",
-            "description": "A pristine rainforest offering remote safaris and unique sightings of forest elephants and gorillas."
+            "description": "A pristine rainforest offering remote safaris and unique sightings of forest elephants and gorillas.",
+            "timeZone": "Africa/Brazzaville"
           }
         ]
       },
@@ -142,32 +161,38 @@
           {
             "name": "Victoria Falls, Zimbabwe/Zambia",
             "imageUrl": "victoria_falls.jpg",
-            "description": "One of the world’s largest waterfalls, locally known as “The Smoke That Thunders.” A must-see natural wonder."
+            "description": "One of the world’s largest waterfalls, locally known as “The Smoke That Thunders.” A must-see natural wonder.",
+            "timeZone": "Africa/Harare"
           },
           {
             "name": "Okavango Delta, Botswana",
             "imageUrl": "okavango_delta_aerial.jpg",
-            "description": "A UNESCO World Heritage Site known for its seasonal floodplains and exceptional wildlife safaris."
+            "description": "A UNESCO World Heritage Site known for its seasonal floodplains and exceptional wildlife safaris.",
+            "timeZone": "Africa/Gaborone"
           },
           {
             "name": "Bazaruto Archipelago, Mozambique",
             "imageUrl": "bazaruto_island_beaches.jpg",
-            "description": "Stunning coral islands with crystal-clear waters, perfect for snorkeling, diving, and relaxation."
+            "description": "Stunning coral islands with crystal-clear waters, perfect for snorkeling, diving, and relaxation.",
+            "timeZone": "Africa/Maputo"
           },
           {
             "name": "Namib Desert, Namibia",
             "imageUrl": "namib_desert_dunes.jpg",
-            "description": "Famous for its towering red dunes at Sossusvlei and dramatic desert landscapes."
+            "description": "Famous for its towering red dunes at Sossusvlei and dramatic desert landscapes.",
+            "timeZone": "Africa/Windhoek"
           },
           {
             "name": "Table Mountain, South Africa",
             "imageUrl": "table_mountain_below.jpg",
-            "description": "Iconic flat-topped mountain in Cape Town offering panoramic views and accessible hiking trails."
+            "description": "Iconic flat-topped mountain in Cape Town offering panoramic views and accessible hiking trails.",
+            "timeZone": "Africa/Johannesburg"
           },
           {
             "name": "Lake Malawi, Malawi",
             "imageUrl": "lake_malawi_shoreline.jpg",
-            "description": "Known as the \"Calendar Lake,\" it features vibrant freshwater fish species and relaxing beaches."
+            "description": "Known as the \"Calendar Lake,\" it features vibrant freshwater fish species and relaxing beaches.",
+            "timeZone": "Africa/Blantyre"
           }
         ]
       }

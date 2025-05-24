@@ -201,6 +201,14 @@
       font-size: 0.9em;
     }
 
+    #no-results-message {
+      text-align: center;
+      font-size: 1.2em;
+      color: #3e2723;
+      margin-top: 20px;
+      display: none;
+    }
+
     .booking-section {
       padding: 40px 20px;
       text-align: center;
@@ -286,6 +294,8 @@
   </section>
 
   <div id="results"></div>
+
+  <div id="no-results-message">No destinations found. Please try different keywords.</div>
 
   <div class="booking-section">
     <button onclick="document.getElementById('booking-form').scrollIntoView({ behavior: 'smooth' });">Book Now</button>
